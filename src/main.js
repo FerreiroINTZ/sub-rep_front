@@ -1,4 +1,5 @@
-// fetch("http://localhost:3100/", {credentials: 'include'})
+const setBtn = document.getElementById("setCookie")
+const getBtn = document.getElementById("getCookie")
 
 function setCookie(){
   fetch("/api/setCookie", {credential: 'include'})
@@ -13,3 +14,6 @@ function getCookie(){
   })
   console.log("cookie acessado!")
 }
+
+setBtn.addEventListener("click", setCookie)
+getBtn.addEventListener("click", getCookie)
